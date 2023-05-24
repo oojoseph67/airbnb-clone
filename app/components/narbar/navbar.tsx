@@ -7,8 +7,12 @@ import Logo from "./logo";
 import Search from "./search";
 import UserMenu from "./usermenu";
 
+import { SafeUser } from "@/app/types";
+
+// we are using SafeUser because it helps reduce the risk of hydration when passing dateTime details
+
 interface NavbarProps {
-  currentUser?: User | null
+  currentUser?: SafeUser | null
 }
 
 const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {

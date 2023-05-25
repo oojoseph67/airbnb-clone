@@ -8,6 +8,7 @@ import Search from "./search";
 import UserMenu from "./usermenu";
 
 import { SafeUser } from "@/app/types";
+import Categories from "./categories";
 
 // we are using SafeUser because it helps reduce the risk of hydration when passing dateTime details
 
@@ -37,6 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
           </div>
         </Container>
       </div>
+      <Categories/>
     </div>
   );
 };
